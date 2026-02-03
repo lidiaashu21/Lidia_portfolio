@@ -115,13 +115,13 @@ export default function Home({ darkMode }) {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <button
-                className="border-2 border-amber-400 p-2 sm:p-3 rounded-2xl text-sm sm:text-base md:text-lg font-bold hover:text-amber-400"
+                className="border-2 border-amber-400 p-3 rounded-2xl text-sm sm:text-base md:text-lg font-bold hover:text-amber-400"
                 onClick={() => window.open(Lidia, "_blank")}
               >
                 View Resume
               </button>
               <button
-                className="border-2 border-amber-400 p-2 sm:p-3 rounded-2xl text-sm sm:text-base md:text-lg font-bold hover:text-amber-400"
+                className="border-2 border-amber-400 p-3 rounded-2xl text-sm sm:text-base md:text-lg font-bold hover:text-amber-400"
                 onClick={handleClickContact}
               >
                 Contact Me
