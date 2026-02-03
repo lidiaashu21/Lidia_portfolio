@@ -20,16 +20,18 @@ import {
 
 export default function Home({ darkMode }) {
   const [clickContact, setClickContact] = useState(false);
-
   const navigate = useNavigate();
+
   function handleClickContact() {
     setClickContact(!clickContact);
     navigate("/contact");
   }
+
   const iconVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
+
   const ContainerVariants = {
     hidden: {},
     visible: {
@@ -38,27 +40,28 @@ export default function Home({ darkMode }) {
       },
     },
   };
+
   return (
-    /*Home <section></section*/
     <>
       <section
         style={{ fontFamily: "'inter',sans-serif" }}
-        className={`min-h-screen pt-24 w-full  shadow-amber-100  ${
+        className={`min-h-screen pt-20 w-full ${
           darkMode
             ? "bg-gradient-to-br from-[#0a1a3b] via-[rgb(16,36,79)] to-[#1a1445] text-white"
             : "bg-white text-black"
         }`}
       >
-        <div className=" grid grid-cols-1 md:grid-cols-2  items-center px-10">
-          {/*Left part */}
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center px-5 sm:px-10 md:px-16 lg:px-24 py-14 gap-8">
+          {/* Left content */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-x-6 "
+            className="space-y-4 sm:space-y-6"
           >
+            {/* Social icons */}
             <motion.div
-              className="flex space-x-6 text-3xl pb-8 pt-6"
+              className="flex flex-row space-x-4 sm:space-x-6 text-2xl sm:text-3xl pb-4"
               variants={ContainerVariants}
               initial="hidden"
               animate="visible"
@@ -92,41 +95,51 @@ export default function Home({ darkMode }) {
               ))}
             </motion.div>
 
-            <h2 className="text-4xl font-bold">
-              Hi, I'M
-              <span className="text-amber-400 mb-3"> Lidia Ashenafi</span>{" "}
+            {/* Heading */}
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+              Hi, I'M <span className="text-amber-400">Lidia Ashenafi</span>
             </h2>
 
-            <p className="text-amber-400 text-xl mb-3"> Software Engineer </p>
-            <p className="max-w-xl leading-relaxed mb-4 md:mb-8">
+            {/* Subheading */}
+            <p className="text-amber-400 text-base sm:text-lg md:text-xl lg:text-2xl">
+              Software Engineer
+            </p>
+
+            {/* Description */}
+            <p className="max-w-full sm:max-w-lg md:max-w-md lg:max-w-lg leading-relaxed text-sm sm:text-base md:text-lg lg:text-xl">
               I’m a <span className="text-amber-400">Web Developer</span>{" "}
               focused on building fast, modern, and scalable web experiences.
-              Front-End is my expertise, Full-Stack development is my passion
+              Front-End is my expertise, Full-Stack development is my passion.
             </p>
-            <div className="space-x-8">
+
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
               <button
-                className="border-2 border-amber-400 p-3 rounded-2xl  text-xl font-bold hover:text-amber-400"
+                className="border-2 border-amber-400 p-2 sm:p-3 rounded-2xl text-sm sm:text-base md:text-lg font-bold hover:text-amber-400"
                 onClick={() => window.open(Lidia, "_blank")}
               >
                 View Resume
               </button>
               <button
-                className="border-2 border-amber-400 p-3 rounded-2xl  text-xl font-bold hover:text-amber-400 "
+                className="border-2 border-amber-400 p-2 sm:p-3 rounded-2xl text-sm sm:text-base md:text-lg font-bold hover:text-amber-400"
                 onClick={handleClickContact}
               >
                 Contact Me
               </button>
             </div>
           </motion.div>
+
+          {/* Right image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex justify-center md:justify-end"
           >
             <img
               src={a1}
               alt="profile"
-              className="w-200 h-100 py-8 md:h-120 py-12 max-w-md  md:ml-30  rounded-s-full rounded-b-full"
+              className="w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-s-full rounded-b-full"
             />
           </motion.div>
         </div>

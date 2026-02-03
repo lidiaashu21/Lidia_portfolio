@@ -16,7 +16,7 @@ export default function About({ darkMode }) {
   return (
     <section
       style={{ fontFamily: "'inter',sans-serif'" }}
-      className={`min-h-screen w-full overflow-x-hidden grid grid-cols-1 space-x-6 md:grid-cols-2 pt-24 shadow-amber-100 ${
+      className={`min-h-screen w-full overflow-x-hidden grid grid-cols-1 md:grid-cols-2 gap-6 pt-24 px-5 sm:px-10 md:px-16 lg:px-24 ${
         darkMode
           ? "bg-gradient-to-br from-[#0a1a3b] via-[rgb(16,36,79)] to-[#1a1445] text-white"
           : "bg-white text-black"
@@ -28,32 +28,29 @@ export default function About({ darkMode }) {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="relative"
+        className="flex flex-col justify-center items-start space-y-6 py-12"
       >
-        <h2 className="text-4xl font-bold py-9 text-center">
-          About <span className="text-amber-400 ">Me</span>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center md:text-left">
+          About <span className="text-amber-400">Me</span>
         </h2>
-        <p className="px-12 leading-relaxed mb-7">
-          I am <span className="text-amber-400"> a Software Engineering </span>{" "}
+        <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-justify">
+          I am a <span className="text-amber-400">Software Engineering</span>{" "}
           student at Bahir Dar University and a frontend-focused web developer
           driven by building exceptional user experiences. I craft
           high-performance, scalable interfaces using React.js, Tailwind CSS
           with deep hands-on expertise from scratch to advanced React. I have
           experience with Next.js and TypeScript, version control git, github,
-          along with solid backend fundamentals in Node.js, TypeOrm, Mysql and
+          along with solid backend fundamentals in Node.js, TypeORM, MySQL, and
           Express, supporting my path toward full-stack development. As a Team
           Leader and Project Manager at Merkeb Technology, I deliver real-world
           web and digital solutions across Ethiopia.
         </p>
-
-        <div className="relative w-full">
-          <button
-            className="border-2 border-amber-400 p-3 rounded-2xl text-xl font-bold mb-9 ml-40 text-center hover:text-amber-400"
-            onClick={handleClickContact}
-          >
-            Contact Me
-          </button>
-        </div>
+        <button
+          className="border-2 border-amber-400 p-2 sm:p-3 rounded-2xl text-sm sm:text-base md:text-lg font-bold hover:text-amber-400 self-center md:self-start"
+          onClick={handleClickContact}
+        >
+          Contact Me
+        </button>
       </motion.div>
 
       {/* Image Section */}
@@ -62,12 +59,12 @@ export default function About({ darkMode }) {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="relative w-full"
+        className="flex justify-center md:justify-end items-center"
       >
         <img
           src={l1}
           alt="profile"
-          className="w-100 h-100 rounded-b-full max-w-md ml-12 md:ml-40"
+          className="w-80 h-68 sm:w-80 sm:h-80 md:w-80 md:h-80 lg:w-90 lg:h-90 rounded-b-full"
         />
       </motion.div>
     </section>

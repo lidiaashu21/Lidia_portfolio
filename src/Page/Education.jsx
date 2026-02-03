@@ -1,42 +1,48 @@
 import React from "react";
 import bdu from "../assets/bdu.jpg";
+
 export default function Education({ darkMode }) {
   return (
     <section
-      style={{ fontFamily: " 'inter',sans-serif" }}
-      className={` w-full max-h-screen mb-40
-${
-  darkMode
-    ? "bg-gradient-to-br from-[#0a1a3b] via-[rgb(16,36,79)] to-[#1a1445] text-white"
-    : "bg-white text-black"
-}
-  `}
+      style={{ fontFamily: "'inter',sans-serif'" }}
+      className={`w-full mb-40 px-4 sm:px-8 md:px-16 lg:px-24 ${
+        darkMode
+          ? "bg-gradient-to-br from-[#0a1a3b] via-[rgb(16,36,79)] to-[#1a1445] text-white"
+          : "bg-white text-black"
+      }`}
     >
-      <h2 className="text-4xl font-bold pt-30 pb-4  text-center ml-12 md: mr-20">
+      {/* Heading */}
+      <h2 className="text-3xl sm:text-4xl font-bold pt-24 pb-8 text-center">
         My <span className="text-amber-400">Education</span>
       </h2>
-      <div className="w-2xl md:w-5xl flex flex-col item-center text-center   ">
+
+      {/* Content */}
+      <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+        {/* Image */}
         <img
           src={bdu}
           alt="bdu logo"
-          className="w-60 h-60 rounded-full ml-50 md:ml-100 mb-4 "
+          className="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full mb-6"
         />
-        <div>
-          <h3 className=" text-2xl mr-16 md:text-3xl font-bold mb-3">
-            Bachelor of Science in{" "}
-            <span className="text-amber-400">Software Engineering</span>
-          </h3>
-          <p className=" text-2xl mr-2.5 md:text-3xl font-bold mb-4">
-            Bahirdar University
-          </p>
-          <p className="  text-2xl md:text-2xl font-bold text-amber-400 mb-6 mr-10">
-            2023 GC- Present
-          </p>
-          <h2 className=" mr-20   md:text-2xl font-medium ">
-            Relevant Coursework: Data Structures, Algorithms, Operating Systems,
-            Web Development,Java,DataBase
-          </h2>
-        </div>
+
+        {/* Text */}
+        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold mb-3">
+          Bachelor of Science in{" "}
+          <span className="text-amber-400">Software Engineering</span>
+        </h3>
+
+        <p className="text-lg sm:text-xl md:text-2xl font-bold mb-4">
+          Bahir Dar University
+        </p>
+
+        <p className="text-lg md:text-xl font-bold text-amber-400 mb-6">
+          2023 GC – Present
+        </p>
+
+        <p className="text-sm sm:text-base md:text-lg font-medium max-w-3xl">
+          Relevant Coursework: Data Structures, Algorithms, Operating Systems,
+          Web Development, Java, Database
+        </p>
       </div>
     </section>
   );
