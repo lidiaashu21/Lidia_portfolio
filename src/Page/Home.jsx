@@ -64,7 +64,9 @@ export default function Home({ darkMode }) {
               className="flex flex-row space-x-4 sm:space-x-6 text-2xl sm:text-3xl pb-4"
               variants={ContainerVariants}
               initial="hidden"
-              animate="visible"
+              whileInView="visible"
+              transition={{ duration: 0.8 }}
+              viewport={{ viewport: false }}
             >
               {[
                 FaTelegramPlane,
@@ -113,7 +115,7 @@ export default function Home({ darkMode }) {
             </p>
 
             {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mb-8">
               <button
                 className="border-2 border-amber-400 p-3 rounded-2xl text-sm sm:text-base md:text-lg font-bold hover:text-amber-400"
                 onClick={() => window.open(Lidia, "_blank")}
@@ -132,14 +134,15 @@ export default function Home({ darkMode }) {
           {/* Right image */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            viewport={{ viewport: false }}
             className="flex justify-center md:justify-end"
           >
             <img
               src={a1}
               alt="profile"
-              className="w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-s-full rounded-b-full"
+              className="w-80 h-80 rounded-s-full rounded-b-full"
             />
           </motion.div>
         </div>
