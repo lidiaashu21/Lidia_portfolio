@@ -43,9 +43,9 @@ ${
               </p>
               <button
                 onClick={() => window.open(photopdf, "_blank")}
-                className="border-2 border-amber-400 p-3 rounded-2xl  text-xl font-bold mb-5 ml-16 text-center hover:text-amber-400"
+                className="border-2 border-amber-400 p-3 rounded-2xl  text-lg font-semibold mb-5 mr-10 text-center hover:text-amber-400"
               >
-                view certificate
+                View certificate
               </button>
             </div>
           </motion.div>
@@ -54,7 +54,7 @@ ${
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ viewport: false }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex-gap-6 item-center text-center  shadow-xl hover:shadow-2xl rounded-xl p-6 w-90 max-w-1xl  md:w-100 md:max-w-2xl mb-8 md:ml-20"
+            className="flex-gap-4 item-center text-center shadow-xl hover:shadow-2xl  rounded-xl p-6 w-90 max-w-1xl  md:w-100 md:max-w-2xl mb-8"
           >
             <img
               src={l2}
@@ -62,7 +62,7 @@ ${
               className="h-54 w-90 rounded-2xl mb-6 mt-0"
             />
             <div>
-              <p className="leading-relaxed w-70 md:w-70 lg:w-80 mb-8">
+              <p className="leading-relaxed w-80 mb-8">
                 Team leadership and project management experience at Merkeb
                 Technology, leading teams on real-world client projects. Oversaw
                 web development, web app development, maintenance, and digital
@@ -72,9 +72,9 @@ ${
                 onClick={() =>
                   window.open("https://merkebwebsite1219.vercel.app", "_blank")
                 }
-                className="border-2 border-amber-400 p-3 rounded-2xl  text-xl font-bold mb-5 ml-16 item-center text-center hover:text-amber-400"
+                className="border-2 border-amber-400 p-3 rounded-2xl  text-lg font-semibold mb-5 mr-10 text-center hover:text-amber-400"
               >
-                show site
+                Show site
               </button>
             </div>
           </motion.div>

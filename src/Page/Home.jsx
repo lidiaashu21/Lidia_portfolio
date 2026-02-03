@@ -96,7 +96,7 @@ export default function Home({ darkMode }) {
             </motion.div>
 
             {/* Heading */}
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold">
               Hi, I'M <span className="text-amber-400">Lidia Ashenafi</span>
             </h2>
 
