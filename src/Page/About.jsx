@@ -46,7 +46,7 @@ export default function About({ darkMode }) {
           web and digital solutions across Ethiopia.
         </p>
         <button
-          className="border-2 border-amber-400 p-3 rounded-2xl  text-lg md:text-xl font-bold mb-5 ml-38 text-center hover:text-amber-400"
+          className="border-2 border-amber-400 p-3 rounded-2xl  text-lg md:text-xl font-bold mb-5 ml-28 text-center hover:text-amber-400"
           onClick={handleClickContact}
         >
           Contact Me
